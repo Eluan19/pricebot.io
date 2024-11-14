@@ -8,11 +8,11 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
     $senha = $_POST['senha'];
 
     // Caminho para o Python
-    $python_executable = 'C:\\Users\\eluan.lima\\AppData\\Local\\Programs\\Python\\Python311\\python.exe';
-    $python_script = 'C:\\xampp\\htdocs\\api_sankhya\\teste.py';  // Caminho para o seu script Python
+  //  $python_executable = 'C:\\Users\\eluan.lima\\AppData\\Local\\Programs\\Python\\Python311\\python.exe';
+    $python_script = 'teste.py';  // Caminho para o seu script Python
 
     // Chama o script Python com os parâmetros via shell_exec
-    $output = shell_exec("\"$python_executable\" \"$python_script\" \"$usuario\" \"$senha\"");
+    $output = shell_exec( \"$python_script\" \"$usuario\" \"$senha\"");
 
     // Verifica se a resposta do Python é "SUCCESS"
     if (trim($output) === "SUCCESS") {
