@@ -12,7 +12,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
     $python_script = 'teste.py';  // Caminho para o seu script Python
 
     // Chama o script Python com os parâmetros via shell_exec
-    $output = shell_exec( \"$python_script\" \"$usuario\" \"$senha\"");
+    $output = shell_exec( "\"$python_script\" \"$usuario\" \"$senha\"");
 
     // Verifica se a resposta do Python é "SUCCESS"
     if (trim($output) === "SUCCESS") {
